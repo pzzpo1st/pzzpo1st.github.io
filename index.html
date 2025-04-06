@@ -37,7 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             // 在页面上显示参数
             var displayDiv = document.createElement('div');
-            displayDiv.innerHTML = '<h2>从URL获取的参数：</h2>' +
+            displayDiv.innerHTML = 
                                  '<p>key1: ' + (params.key1 || '') + '</p>' +
                                  '<p>key2: ' + (params.key2 || '') + '</p>';
             document.body.appendChild(displayDiv);
@@ -50,11 +50,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <h1>URL参数展示：</h1>
-  <div>
-     <p>Key1: <span id="key1-display"></span></p >
-     <p>Key2: <span id="key2-display"></span></p >
- </div>
-  <div id="display-keys">
-  </div>
 </body>
 </html>
