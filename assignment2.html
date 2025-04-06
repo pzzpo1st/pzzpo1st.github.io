@@ -22,8 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             return params;
         }
-
-        
+  var params = getUrlvals();
         // 当DOM加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             var params = getUrlvals();
