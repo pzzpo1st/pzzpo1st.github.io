@@ -22,11 +22,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             return params;
         }
-  var params = getUrlvals();
         // 当DOM加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             var params = getUrlvals();
-            
             // 将参数推送到dataLayer供GTM使用
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -40,8 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  '<p>key1: ' + (params.key1 || '') + '</p>' +
                                  '<p>key2: ' + (params.key2 || '') + '</p>';
             document.body.appendChild(displayDiv);
-        });
-  (function(a,b,c,d,e,f,g){
+            (function(a,b,c,d,e,f,g){
         e['ire_o']=c;
         e[c]=e[c]||function(){
             (e[c].a=e[c].a||[]).push(arguments);
@@ -64,6 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         customerid: params.key1,  // 对应原代码中的INSERT key1
         customeremail:params.key2  // 对应原代码中的INSERT key2
     });
+        });
     </script>  
 </head>
 <body>
