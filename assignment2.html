@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7PW56WL');</script>
+<!-- End Google Tag Manager -->
+<script>
+        // 解析URL参数函数
+        function getUrlvals() {
+            var params = {};
+            var urlString = window.location.search.substring(1);
+            var urlArys = urlString.split('&');
+            
+            for (var i = 0; i < urlArys.length; i++) {
+                var pair = urlArys[i].split('=');
+                params[pair[0]] = pair[1];
+            }
+            
+            return params;
+        }
+
+        
+        // 当DOM加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = getUrlvals();
+            
+            // 将参数推送到dataLayer供GTM使用
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'key1': params.key1 || '',
+                'key2': params.key2 || ''
+            });
+            
+            // 在页面上显示参数
+            var displayDiv = document.createElement('div');
+            displayDiv.innerHTML = 
+                                 '<p>key1: ' + (params.key1 || '') + '</p>' +
+                                 '<p>key2: ' + (params.key2 || '') + '</p>';
+            document.body.appendChild(displayDiv);
+        });
+  (function(a,b,c,d,e,f,g){
+        e['ire_o']=c;
+        e[c]=e[c]||function(){
+            (e[c].a=e[c].a||[]).push(arguments);
+        };
+        f=d.createElement(b);
+        g=d.getElementsByTagName(b)[0];
+        f.async=1;
+        f.src=a;
+        g.parentNode.insertBefore(f,g);
+    })(
+        'https://utt.impactcdn.com/A2788006-de3d-4011-a57c-c4737e79de0365535.js',
+        'script',
+        'ire',
+        document,
+        window
+    );
+    
+   //任务要求需要实现的代码如下  
+    ire('identify', {
+        customerid: params.key1,  // 对应原代码中的INSERT key1
+        customeremail:params.key2  // 对应原代码中的INSERT key2
+    });
+    </script>  
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7PW56WL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <h1>URL参数展示：</h1>
+</body>
+</html>
