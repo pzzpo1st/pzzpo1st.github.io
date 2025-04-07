@@ -25,12 +25,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // 当DOM加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             var params = getUrlvals();
-            // 将参数推送到dataLayer供GTM使用
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'key1': params.key1 || '',
-                'key2': params.key2 || ''
-            });
             
             // 在页面上显示参数
             var displayDiv = document.createElement('div');
