@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W7PW56WL');</script>
 <!-- End Google Tag Manager -->
 <script>
-        // 解析URL参数函数
+      // 解析URL参数函数
         function getUrlvals() {
             var params = {};
             var urlString = window.location.search.substring(1);
@@ -21,7 +21,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             
             return params;
-        }       
+        }
+        // 当DOM加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = getUrlvals();
             // 在页面上显示参数
             var displayDiv = document.createElement('div');
             displayDiv.innerHTML = 
